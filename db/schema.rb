@@ -10,10 +10,77 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180522160549) do
+ActiveRecord::Schema.define(version: 20180523132001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "color_id"
+    t.string "wearable_type"
+    t.bigint "wearable_id"
+    t.integer "usage"
+    t.integer "season"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["color_id"], name: "index_articles_on_color_id"
+    t.index ["user_id"], name: "index_articles_on_user_id"
+    t.index ["wearable_type", "wearable_id"], name: "index_articles_on_wearable_type_and_wearable_id"
+  end
+
+  create_table "bottoms", force: :cascade do |t|
+    t.integer "kind"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "coats", force: :cascade do |t|
+    t.integer "kind"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "colors", force: :cascade do |t|
+    t.string "name"
+    t.string "hex"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dresses", force: :cascade do |t|
+    t.integer "kind"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "outfits", force: :cascade do |t|
+    t.bigint "proposal_id"
+    t.bigint "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_outfits_on_article_id"
+    t.index ["proposal_id"], name: "index_outfits_on_proposal_id"
+  end
+
+  create_table "proposals", force: :cascade do |t|
+    t.integer "meteo"
+    t.integer "usage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shoes", force: :cascade do |t|
+    t.integer "kind"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tops", force: :cascade do |t|
+    t.integer "kind"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +99,8 @@ ActiveRecord::Schema.define(version: 20180522160549) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "articles", "colors"
+  add_foreign_key "articles", "users"
+  add_foreign_key "outfits", "articles"
+  add_foreign_key "outfits", "proposals"
 end
