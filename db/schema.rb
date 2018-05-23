@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180523125323) do
+ActiveRecord::Schema.define(version: 20180523132001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,22 @@ ActiveRecord::Schema.define(version: 20180523125323) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "outfits", force: :cascade do |t|
+    t.bigint "proposal_id"
+    t.bigint "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_outfits_on_article_id"
+    t.index ["proposal_id"], name: "index_outfits_on_proposal_id"
+  end
+
+  create_table "proposals", force: :cascade do |t|
+    t.integer "meteo"
+    t.integer "usage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "shoes", force: :cascade do |t|
     t.integer "kind"
     t.datetime "created_at", null: false
@@ -85,4 +101,6 @@ ActiveRecord::Schema.define(version: 20180523125323) do
 
   add_foreign_key "articles", "colors"
   add_foreign_key "articles", "users"
+  add_foreign_key "outfits", "articles"
+  add_foreign_key "outfits", "proposals"
 end

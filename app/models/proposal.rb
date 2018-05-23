@@ -2,6 +2,7 @@ class Proposal < ApplicationRecord
   has_many :outfits, dependent: :destroy
 
 
+
   enum meteo: [
     :shinny,
     :cloudy,
