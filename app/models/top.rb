@@ -1,5 +1,5 @@
 class Top < ApplicationRecord
-  has_many :articles, dependent: :destroy
+  has_many :articles, dependent: :destroy, as: :wearable
 
   enum kind: [
     :tee_shirt,

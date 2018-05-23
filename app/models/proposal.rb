@@ -1,5 +1,5 @@
 class Proposal < ApplicationRecord
-  has_many :outfits, dependent: :destroy
+  has_many :outfits, dependent: :destroy, as: :wearable
 
 
 

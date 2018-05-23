@@ -1,5 +1,5 @@
 class Bottom < ApplicationRecord
-  has_many :articles, dependent: :destroy
+  has_many :articles, dependent: :destroy, as: :wearable
 
   enum kind: [
     :jean,
