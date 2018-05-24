@@ -11,16 +11,18 @@ puts "begin seeding"
 puts "clean database"
 
 #  il faut tout detruire avant de creer du neuf
+Outfit.destroy_all
 User.destroy_all  # DONE
 Article.destroy_all  # DONE
 Proposal.destroy_all
-Outfit.destroy_all
+# Outfit.destroy_all
 Color.destroy_all  # DONE
 Shoe.destroy_all  # DONE
 Coat.destroy_all  # DONE
 Bottom.destroy_all  # DONE
 Dress.destroy_all  # DONE
 Top.destroy_all  # DONE
+
 
 
 
@@ -94,9 +96,6 @@ top5 = Top.create!(kind: :pull)
 top6 = Top.create!(kind: :sweat)
 
 
-
-
-
 #     ARTICLES
 puts "create article"
 article1 = Article.new(
@@ -139,6 +138,64 @@ article4 = Article.new(
 article4.wearable = dress1
 article4.save!
 
+
+
+#       PROPOSAL 1
+puts "Mevestido is creating a new proposal"
+proposal1 = Proposal.create!(
+  meteo: :winter,
+  usage: :chill,
+)
+#   Outfit du proposal 1
+outfit = Outfit.create!(
+  proposal: proposal1,
+  article: article4,
+)
+
+# #     PROPOSAL 2
+# proposal2 = Proposal.create!(
+#   meteo: :summer,
+#   usage: :work,
+# )
+# #   Outfit du proposal 2
+# outfit2 = Outfit.create!(
+#   proposal: proposal2,
+#   article: article2,
+#   )
+
+# proposal2 = Proposal.new(
+#   meteo: :snowy,
+#   usage: :work,
+#   )
+# proposal2.save!
+
+# proposal3 = Proposal.new(
+#   meteo: :shinny,
+#   usage: :work,
+#   )
+# proposal3.save!
+
+# proposal4 = Proposal.new(
+#   meteo: :windy,
+#   usage: :chill,
+#   )
+# proposal4.save!
+
+
+
+
+
+
+
+
+
+
+#   OUTFITS
+# puts "Your new outfit"
+# outfit = Outfit.new(
+#   proposal: proposal1
+#   article: article4
+#   )
 
 
 

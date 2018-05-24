@@ -1,5 +1,15 @@
+# == Schema Information
+#
+# Table name: tops
+#
+#  id         :bigint(8)        not null, primary key
+#  kind       :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 class Top < ApplicationRecord
-  has_many :articles, dependent: :destroy, as: :wearable
+  has_many :articles, as: :wearable
 
   enum kind: [
     :tee_shirt,
