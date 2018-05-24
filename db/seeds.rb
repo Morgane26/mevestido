@@ -42,12 +42,38 @@ user2 = User.create!(
 
 #     COLORS
 puts "create colors"
+
 colors = [
-  ["noir absolu", "#00000"],
-  ["blanc éternel", "#fffff"],
-  ["cyan", "00f2ff"],
-  ["vert pomme", "00ff59"],
-  ["rouge de l'amour", "ff0000"],
+  ["black", "#000000"],
+  ["white", "#ffffff"],
+  ["silver", "#C0C0C0"],
+  ["grey", "#808080"],
+  ["red", "#FF0000"],
+  ["maroon", "#800000"],
+  ["yellow", "#FFFF00"],
+  ["olive", "#808000"],
+  ["lime", "#00FF00"],
+  ["green", "#008000"],
+  ["aqua", "#00FFFF"],
+  ["teal", "#008080"],
+  ["blue", "#0000FF"],
+  ["navy", "#000080"],
+  ["fushia", "#FF00FF"],
+  ["purple", "#800080"],
+  ["orange", "#FFAF33"],
+  ["dark green", "#006400"],
+  ["pink", "#E71EB0"],
+  ["egg shell", "#FCFCF8"],
+  ["light salmon", "#FFA07A"],
+  ["gold", "#FFD700"],
+  ["lavander", "#E6E6FA"],
+  ["grey blue", "#213856"],
+  ["violet", "#9400D3"],
+  ["sky blue", "#87CEEB"],
+  ["chocolate", "#8B4513"],
+  ["beige", "#FDF5E6"],
+  ["ivory", "#FFFFF0"],
+  ["firebrick", "#B22222"],
 ]
 
 colors.each do |color|
