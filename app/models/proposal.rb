@@ -9,17 +9,15 @@
 #  updated_at :datetime         not null
 #
 
+
 class Proposal < ApplicationRecord
   has_many :outfits, dependent: :destroy, as: :wearable
 
-
-
   enum meteo: [
-    :shinny,
-    :cloudy,
-    :windy,
-    :rainy,
-    :snowy,
+    :spring,
+    :summer,
+    :autumn,
+    :winter,
   ]
 
   enum usage: [

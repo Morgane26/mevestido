@@ -9,7 +9,7 @@
 #
 
 class Top < ApplicationRecord
-  has_many :articles, dependent: :destroy, as: :wearable
+  has_many :articles, as: :wearable
 
   enum kind: [
     :tee_shirt,

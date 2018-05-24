@@ -9,7 +9,7 @@
 #
 
 class Bottom < ApplicationRecord
-  has_many :articles, dependent: :destroy, as: :wearable
+  has_many :articles, as: :wearable
 
   enum kind: [
     :jean,
