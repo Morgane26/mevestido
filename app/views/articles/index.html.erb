@@ -1,0 +1,23 @@
+<h1> All of yours clothes </h1>
+
+  <div class="container">
+    <div class="row">
+
+      <% @article.each do |article_by_article| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card">
+
+
+
+            <div class="card-body">
+              <h5 class="card-title"><%= @article.all %></h5>
+              <%= link_to "Add a new clothe", articles_path, :class => "btn btn-primary "%>
+              <%= link_to "Finished", articles_path, :class => "btn btn-primary" %>
+              <br>
+            </div>
+            <br>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
