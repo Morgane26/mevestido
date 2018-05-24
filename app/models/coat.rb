@@ -17,4 +17,8 @@ class Coat < ApplicationRecord
     :trench,
     :long,
   ]
+
+  def name
+    "#{self.class}: #{kind.capitalize.gsub('_', ' ')}"
+  end
 end

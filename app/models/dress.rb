@@ -16,4 +16,9 @@ class Dress < ApplicationRecord
     :midi,
     :courte,
   ]
+
+  def name
+    "#{self.class}: #{kind.capitalize.gsub('_', ' ')}"
+  end
+
 end

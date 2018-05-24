@@ -19,4 +19,11 @@ class Bottom < ApplicationRecord
     :skirt,
     :chino,
   ]
+
+
+  # Do not use
+  def name
+    "#{self.class}: #{kind.capitalize.gsub('_', ' ')}"
+  end
+
 end
