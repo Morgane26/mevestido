@@ -1,26 +1,26 @@
 <h1>Add a new Article</h1>
 
 <div class="container">
-  <div>
-    <%= simple_form_for(@article) do |f| %>
-      <div>
-        <div class="field">
-          <%= f.label :season %>
-          <br>
-          <%= f.select :season, Article.seasons.keys %>
-        </div>
-        <div>
-          <%= f.label :usage %>
-          <br>
-          <%=f.select :usage, Article.usages.keys %>
-        </div>
-      </div>
-      <div>
-        <br>
-        <div>
-          <%= f.button :submit %>
-        </div>
-      </div>
-    <% end %>
-  </div>
+
+  <%= simple_form_for(@article) do |f| %>
+
+    <%= f.input :wearable,
+          collection: @wearables,
+          prompt: "Select wearable type" %>
+
+    <%= f.input :season,
+        collection: Article.seasons.keys
+        prompt: "Select a season" %>
+
+    <%= f.input :color,
+        collection: @colors,
+        prompt: "Select a color" %>
+
+    <%= f.input :usage,
+        collection: Article.usages.keys
+        prompt: "Select usage" %>
+
+    <%= f.button :submit %>
+
+  <% end %>
 </div>

@@ -5,13 +5,22 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+    @wearables = []
+    @wearables << Top.all
+    @wearables << Bottom.all
+    @wearables << Dress.all
+    @wearables << Coat.all
+    @wearables << Shoe.all
+    @wearables.flatten!
+    @colors = []
+    @colors = Color.all
   end
 
   def create
-    @article = Article.new(meal_params)
+    @article = Article.new(article_params)
     @article.user = current_user
     if @article.save
-      redirect_to article_path(@article)
+      redirect_to home
     else
       render :new
     end
@@ -19,9 +28,8 @@ class ArticlesController < ApplicationController
 
 private
 
-   def meal_params
+   def article_params
       params.require(:article).permit(:season, :usage)
     end
-
 
 end
