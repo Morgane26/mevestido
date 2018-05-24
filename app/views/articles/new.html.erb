@@ -1,8 +1,26 @@
+<h1>Add a new Article</h1>
 
-<%= form_for(@artcile) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div>
+    <%= simple_form_for(@article) do |f| %>
+      <div>
+        <div class="field">
+          <%= f.label :season %>
+          <br>
+          <%= f.select :season, Article.seasons.keys %>
+        </div>
+        <div>
+          <%= f.label :usage %>
+          <br>
+          <%=f.select :usage, Article.usages.keys %>
+        </div>
+      </div>
+      <div>
+        <br>
+        <div>
+          <%= f.button :submit %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
