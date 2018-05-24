@@ -5,6 +5,10 @@ class ArticlesController < ApplicationController
 
   def new
     @article = Article.new
+
+    @wearable_types = ["Top", "Bottom", "Coat", "Shoe", "Dress"]
+
+
     @wearables = []
     @wearables << Top.all
     @wearables << Bottom.all
@@ -18,18 +22,27 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    wearable = wearable_type.find(wearable_id)
+    @article.wearable = wearable
     @article.user = current_user
     if @article.save
-      redirect_to home
+      redirect_to new_article_path, notice: "GOOD"
     else
       render :new
     end
   end
 
-private
+  private
 
-   def article_params
-      params.require(:article).permit(:season, :usage)
-    end
+  def article_params
+    params.require(:article).permit(:season, :usage, :color_id)
+  end
 
+  def wearable_type
+    params[:article][:wearable_type].constantize
+  end
+
+  def wearable_id
+    params[:article][:wearable_id]
+  end
 end

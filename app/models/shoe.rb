@@ -19,6 +19,8 @@ class Shoe < ApplicationRecord
     :loafers,
   ]
 
+
+
   def name
     "#{self.class}: #{kind.capitalize.gsub('_', ' ')}"
   end

@@ -1,26 +1,40 @@
 <h1>Add a new Article</h1>
 
 <div class="container">
+  <div class="row">
+    <div class="col-md-4 col-xs-6 col-lg-4">
+      <%= simple_form_for(@article) do |f| %>
+        <div class = "input-new-article">
+          <%= f.input :wearable_type,
+                collection: @wearable_types,
+                prompt: "Select wearable type" %>
+        </div>
+        <div class = "input-new-article">
+          <%= f.association :wearable,
+                collection: @wearables,
+                prompt: "Select wearable" %>
+        </div>
 
-  <%= simple_form_for(@article) do |f| %>
+        <div class = "input-new-article">
+          <%= f.input :season,
+              collection: Article.seasons.keys,
+              prompt: "Select a season" %>
+        </div>
 
-    <%= f.input :wearable,
-          collection: @wearables,
-          prompt: "Select wearable type" %>
+        <div class = "input-new-article">
+          <%= f.association :color,
+              prompt: "Select a color" %>
+        </div>
 
-    <%= f.input :season,
-        collection: Article.seasons.keys
-        prompt: "Select a season" %>
-
-    <%= f.input :color,
-        collection: @colors,
-        prompt: "Select a color" %>
-
-    <%= f.input :usage,
-        collection: Article.usages.keys
-        prompt: "Select usage" %>
-
-    <%= f.button :submit %>
-
-  <% end %>
+        <div class = "input-new-article">
+          <%= f.input :usage,
+              collection: Article.usages.keys,
+              prompt: "Select usage" %>
+        </div>
+        <div class= "submit-edit">
+          <%= f.button :submit %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

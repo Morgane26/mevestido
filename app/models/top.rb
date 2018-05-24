@@ -20,6 +20,7 @@ class Top < ApplicationRecord
     :sweat,
   ]
 
+
   def name
     "#{self.class}: #{kind.capitalize.gsub('_', ' ')}"
   end
