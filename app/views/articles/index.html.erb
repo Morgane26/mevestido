@@ -1,0 +1,27 @@
+<h1> Yours clothes </h1>
+
+  <div class="container">
+    <div class="row">
+
+      <% @article.each do |article_test| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+
+            <div class="card-body">
+
+
+              <p class="card-text"> <%= @article.all %> </p>
+              <%= link_to "Add another article", articles_path, :class => "btn btn-primary"%>
+              <%= link_to "Finished", articles_path, :class => " btn btn-primary" %>
+
+            </div>
+
+        </div>
+
+      <%end%>
+
+
+
+
+    </div>
+  </div>
+
