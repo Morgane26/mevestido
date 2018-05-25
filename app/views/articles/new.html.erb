@@ -2,7 +2,17 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-xs-6 col-lg-4">
+    <div class="col-xs-4 col-md-3 col-lg-3">
+      <div class="div-article-new">
+    <%= image_tag "chemise_croctop_test.png",
+        alt: "Chemise",
+        :class => "img-article" %>
+    </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 col-xs-4 col-lg-3">
       <%= simple_form_for(@article) do |f| %>
         <div class = "input-new-article">
           <%= f.input :wearable_type,
@@ -35,6 +45,11 @@
           <%= f.button :submit %>
         </div>
       <% end %>
+     <br>
+      <div>
+        <a class="btn btn-success" href="#" role="button">Your dressing</a>
+        <!-- mettre un link_to -->
+      </div>
     </div>
   </div>
 </div>
