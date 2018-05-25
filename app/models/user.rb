@@ -23,4 +23,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :articles, dependent: :destroy
+
+  validates :city, presence: true
 end

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :articles, only:[:index, :new, :create]
+
+  #:delete
+  #upgrade ..
   # get  "artciles", to: "articles#index"
 
   # get  "articles/new", to: "articles#new"

@@ -11,11 +11,11 @@ puts "begin seeding"
 puts "clean database"
 
 #  il faut tout detruire avant de creer du neuf
-Outfit.destroy_all
+
 User.destroy_all  # DONE
 Article.destroy_all  # DONE
 Proposal.destroy_all
-# Outfit.destroy_all
+Outfit.destroy_all
 Color.destroy_all  # DONE
 Shoe.destroy_all  # DONE
 Coat.destroy_all  # DONE
@@ -32,13 +32,15 @@ puts "create users"
 user1 = User.create!(
   email: "chaton@gmail.com",
   password: "password",
-  password_confirmation: "password"
+  password_confirmation: "password",
+  city: "Montpellier",
 )
 
 user2 = User.create!(
   email: "toto@gmail.com",
   password: "password",
-  password_confirmation: "password"
+  password_confirmation: "password",
+  city: "Marseille",
 )
 
 
