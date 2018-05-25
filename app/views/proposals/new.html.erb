@@ -1,0 +1,7 @@
+<%= simple_form_for @proposal do |f| %>
+    <%= f.input :meteo, collection: Proposal.meteos.keys,
+       prompt:"Select a meteo" %>
+    <%= f.input :usage, collection: @usage_list %>
+    <%= f.submit %>
+<% end %>
+
