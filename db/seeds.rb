@@ -32,13 +32,15 @@ puts "create users"
 user1 = User.create!(
   email: "chaton@gmail.com",
   password: "password",
-  password_confirmation: "password"
+  password_confirmation: "password",
+  city: "Montpellier",
 )
 
 user2 = User.create!(
   email: "toto@gmail.com",
   password: "password",
-  password_confirmation: "password"
+  password_confirmation: "password",
+  city: "Marseille",
 )
 
 
