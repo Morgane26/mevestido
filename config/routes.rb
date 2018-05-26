@@ -4,8 +4,13 @@ Rails.application.routes.draw do
 
   resources :articles, only:[:index, :new, :create]
 
+
   #:delete
   #upgrade ..
+=======
+  get "proposals/plan", to: "proposals#plan"
+  post "proposals/results", to: "proposals#results"
+
   # get  "artciles", to: "articles#index"
 
   # get  "articles/new", to: "articles#new"

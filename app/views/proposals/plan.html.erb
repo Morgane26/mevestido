@@ -1,0 +1,6 @@
+<%= simple_form_for @proposal, url: proposals_results_path, method: :post do |f| %>
+    <%= f.input :meteo, collection: Proposal.meteos.keys,
+       prompt:"Select a meteo" %>
+    <%= f.input :usage, collection: Proposal.usages.keys, prompt: "Select an usage" %>
+    <%= f.button :submit, "Search" %>
+<% end %>

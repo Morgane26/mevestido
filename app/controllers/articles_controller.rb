@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
     @article.wearable = wearable
     @article.user = current_user
     if @article.save
-      redirect_to new_article_path, notice: "GOOD"
+      redirect_to new_article_path, notice: "Article successfully created"
     else
       render :new
     end
