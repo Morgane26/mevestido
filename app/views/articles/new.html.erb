@@ -16,9 +16,35 @@
         </div>
         <div class="card" id="">
           <div class = "input-new-article">
-            <%= f.association :wearable,
+            <%# f.association :wearable,
                 collection: @wearables,
                 prompt: "Select wearable" %>
+            <div class="hidden wearable" id="Top">
+               <%= f.association :wearable,
+                collection: @tops,
+                prompt: "Select top" %>
+            </div>
+           <div class="hidden wearable" id="Dress">
+              <%= f.association :wearable,
+                collection: @dresses,
+                prompt: "Select dress" %>
+           </div>
+           <div class="hidden wearable" id="Bottom">
+               <%= f.association :wearable,
+                collection: @bottoms,
+                prompt: "Select wearable" %>
+           </div>
+            <div class="hidden wearable" id="Coat">
+              <%= f.association :wearable,
+                collection: @coats,
+                prompt: "Select wearable" %>
+            </div>
+
+            <div class="hidden wearable" id="Shoe">
+              <%= f.association :wearable,
+                collection: @shoes,
+                prompt: "Select wearable" %>
+            </div>
           </div>
         </div>
       </div>
@@ -26,7 +52,9 @@
     <div class="container">
       <div class="row" id="wearable_image_create_dressing">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="div-article-new">
+
+            <div class="div-article-new" id="div-article-color" data-colors="<%= @js_colors.to_json %>">
+
               <%= image_tag "chemise_croptop.png",
                   alt: "Chemise",
                   :class => "img-article" %>
@@ -44,6 +72,7 @@
         </div>
 
         <div class = "input-new-article">
+
           <%= f.association :color,
               prompt: "Select a color" %>
         </div>
