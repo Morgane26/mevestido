@@ -11,11 +11,11 @@ puts "begin seeding"
 puts "clean database"
 
 #  il faut tout detruire avant de creer du neuf
-Outfit.destroy_all
+
 User.destroy_all  # DONE
 Article.destroy_all  # DONE
 Proposal.destroy_all
-# Outfit.destroy_all
+Outfit.destroy_all
 Color.destroy_all  # DONE
 Shoe.destroy_all  # DONE
 Coat.destroy_all  # DONE
