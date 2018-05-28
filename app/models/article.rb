@@ -17,6 +17,7 @@ class Article < ApplicationRecord
   belongs_to :user
   belongs_to :color
   belongs_to :wearable, polymorphic: true
+  has_many :outfits, dependent: :destroy
 
   enum season: [
     :spring,

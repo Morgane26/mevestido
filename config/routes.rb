@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   #:delete
   #upgrade ..
-=======
+
   get "proposals/plan", to: "proposals#plan"
   post "proposals/results", to: "proposals#results"
 
