@@ -8,6 +8,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.1.6'
+gem 'omniauth-facebook'
 gem 'redis'
 
 
@@ -19,6 +20,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'rest-client'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
