@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+
   resources :articles, only:[:index, :new, :create]
 
 
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
 
   get "proposals/plan", to: "proposals#plan"
   post "proposals/results", to: "proposals#results"
+  get "about", to: "pages#about"
 
   # get  "artciles", to: "articles#index"
 
