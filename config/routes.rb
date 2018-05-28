@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
+
   resources :articles, only:[:index, :new, :create]
   resources :proposals, only:[:index, :new, :plan, :results]
 
@@ -13,8 +14,11 @@ end
   #:delete
   #upgrade ..
 
+
   # get "proposals/plan", to: "proposals#plan"
   # post "proposals/results", to: "proposals#results"
+=======
+
 
   # get  "artciles", to: "articles#index"
 
