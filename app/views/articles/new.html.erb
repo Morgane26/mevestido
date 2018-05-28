@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-4 col-md-3 col-lg-3">
+    <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="div-article-new">
     <%= image_tag "chemise_croctop_test.png",
         alt: "Chemise",
@@ -11,20 +11,24 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-3 col-xs-4 col-lg-3">
-      <%= simple_form_for(@article) do |f| %>
-        <div class = "input-new-article">
-          <%= f.input :wearable_type,
-                collection: @wearable_types,
-                prompt: "Select wearable type" %>
-        </div>
-        <div class = "input-new-article">
-          <%= f.association :wearable,
-                collection: @wearables,
-                prompt: "Select wearable" %>
-        </div>
-
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <%= simple_form_for(@article) do |f| %>
+          <div class = "input-new-article">
+            <%= f.input :wearable_type,
+                  collection: @wearable_types,
+                  prompt: "Select wearable type" %>
+          </div>
+          <div class = "input-new-article">
+            <%= f.association :wearable,
+                  collection: @wearables,
+                  prompt: "Select wearable" %>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-xs-4 col-lg-3">
         <div class = "input-new-article">
           <%= f.input :season,
               collection: Article.seasons.keys,
@@ -41,11 +45,18 @@
               collection: Article.usages.keys,
               prompt: "Select usage" %>
         </div>
-        <div class= "submit-edit">
-          <%= f.button :submit %>
-        </div>
-      <% end %>
-     <br>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-md-3 col-xs-4 col-lg-3">
+          <div class= "submit-edit">
+            <%= f.button :submit %>
+          </div>
+        <% end %>
+      <br>
+      </div>
+    </div>
+
       <div>
         <%= link_to articles_path :class => "btn btn-success" %>
         <!-- mettre un link_to -->

@@ -11,7 +11,7 @@
 
 
 class Proposal < ApplicationRecord
-  has_many :outfits, dependent: :destroy, as: :wearable
+  has_many :outfits, dependent: :destroy
 
   enum meteo: [
     :spring,
