@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
     @wearable_types = ["Top", "Bottom", "Coat", "Shoe", "Dress"]
 
 
+
     # @wearables = []
     # @wearables << Top.all
     # @wearables << Bottom.all
@@ -21,6 +22,7 @@ class ArticlesController < ApplicationController
     @dresses = Dress.all
     @coats = Coat.all
     @shoes = Shoe.all
+    
     @colors = Color.all
 
     @js_colors = {}
