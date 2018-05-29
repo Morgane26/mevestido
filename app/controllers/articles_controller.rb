@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
     @dresses = Dress.all
     @coats = Coat.all
     @shoes = Shoe.all
-    
+
     @colors = Color.all
 
     @js_colors = {}
@@ -33,7 +33,6 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-    binding.pry
     wearable = wearable_type.find(wearable_id)
     @article.wearable = wearable
     @article.user = current_user
