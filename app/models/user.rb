@@ -26,7 +26,7 @@ class User < ApplicationRecord
 
   has_many :articles, dependent: :destroy
 
-  # validates :city, presence: true, dependent: :destroy,
+  # validates :city, presence: true, dependent: :destroy
 
   # mount_uploader :photo, PhotoUploader
 

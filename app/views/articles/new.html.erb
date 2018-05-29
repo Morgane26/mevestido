@@ -1,20 +1,21 @@
 
-<div class="background2" style="background-image: url('<%= image_path("background_p2.jpg") %>')">
-
+<div class="background2 pt" style="background-image: url('<%= image_path("background_p2.jpg") %>')">
 
   <h1>Create your dressing</h1>
+
   <div class="container">
+    <h1 class="mt0 h3">Create Your dressing</h1>
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
         <%= simple_form_for(@article) do |f| %>
-        <div class="card">
+        <div class="">
           <div class = "input-new-article">
             <%= f.input :wearable_type,
                   collection: @wearable_types,
                   prompt: "Select wearable type" %>
           </div>
         </div>
-        <div class="card" id="">
+        <div class="" id="">
           <div class = "input-new-article">
             <%# f.association :wearable,
                 collection: @wearables,
@@ -90,8 +91,13 @@
     </div>
       <div class="row" id="wearable_option_create_dressing">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" >
+
+          <div class="submit-edit">
+            <%= f.button :submit,  :class => "btn  btn-vestido btn-block"%>
+
           <div class="submit-edit-dressing">
             <%= f.button :submit %>
+
           </div>
         <% end %>
       <br>
@@ -100,7 +106,13 @@
         </div>
       </div>
     </div>
+
+
+      <div>
+        <%= link_to "Your Dressing", articles_path, :class => "btn btn-vestido btn-block"%>
+
         <br>
+
       </div>
     </div>
   </div>

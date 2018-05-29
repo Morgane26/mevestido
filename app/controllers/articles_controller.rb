@@ -29,6 +29,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+
     wearable = wearable_type.find(wearable_id)
     @article.wearable = wearable
     @article.user = current_user

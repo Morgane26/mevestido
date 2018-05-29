@@ -27,23 +27,24 @@ class ProposalsController < ApplicationController
 
   def results
     # appel à l'api de météo pour récupérer la température en integer
-    get_temperature = Weather.new
+    weather_instance = Weather.new(current_user.city)
+        # weather_instance.save!
+    @meteo = weather_instance.call
     # mapping de température avec la saison
-    # binding.pry
-    season = temp_to_meteo(20)
+    @season = temp_to_meteo(@meteo.temperature)
     #recherche des propositions correspondantes à la saison et l'usage
     #@proposals = Proposal.all.where(meteo: season, usage: params[:proposal][:usage])
-    @proposals = Proposal.all.where(meteo: params[:proposal][:meteo], usage: params[:proposal][:usage])
+    @proposals = Proposal.all.where(meteo: @season, usage: params[:proposal][:usage])
   end
 
 private
 
   def temp_to_meteo(t)
-    if t > 25
+    if t > 19
       "summer"
-    elsif t > 15
+    elsif t > 12
       "spring"
-    elsif t > 10
+    elsif t > 8
       "autumn"
     else
       "winter"
