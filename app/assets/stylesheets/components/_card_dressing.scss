@@ -2,4 +2,37 @@
   background-color: white;
   height: 350px;
   width: 250px;
+  margin-bottom: 20px;
+  text-align: center;
 }
+
+.card-body {
+  background-color: white;
+  height: 350px;
+  width: 250px;
+}
+
+.card-article-dressing :active {
+  p {
+    opacity: 1;
+    color: white;
+  }
+
+  background: grey;
+  opacity: 0.15;
+}
+
+
+.card-body p {
+  opacity: 0;
+}
+
+.image-article-dressing {
+  height: 350px;
+}
+
+
+// .card-body:active {
+//   background-color: black;
+//   color: white;
+

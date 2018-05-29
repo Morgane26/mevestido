@@ -1,13 +1,17 @@
+<div class="background2" style="background-image: url('<%= image_path("background_p2.jpg") %>')">
+
 <h1>Your Dressing</h1>
 
   <div class="container">
     <div class="row">
       <% @article.each do |article| %>
         <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="card-article-dressing mb">
-            <%# cl_image_tag(article.image, width: 350, height: 350, crop: :fill)  %>
+          <div class="card-article-dressing">
+            <%= image_tag "",
+                  alt: "Chemise",
+                  :class => "img-article-dressing" %>
             <div class="card-body">
-                <p class="card-title"><%= article.season %></p>
+                <p class="card-title"> <%= article.season %> </p>
                 <p class="card-text"> <%= article.usage %> </p>
             </div>
             <br>
@@ -15,6 +19,6 @@
         </div>
       <%end%>
     </div>
-      <%= link_to "Add a new clothe", articles_path, :class => "btn btn-primary "%>
-      <%= link_to "Finished", articles_path, :class => "btn btn-primary" %>
   </div>
+<%= link_to "Add a new clothe", articles_path, :class => "btn btn-primary "%>
+<%= link_to "Finished", articles_path, :class => "btn btn-primary" %>
