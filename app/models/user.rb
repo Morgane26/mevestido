@@ -25,6 +25,7 @@ class User < ApplicationRecord
   devise :omniauthable, omniauth_providers: [:facebook]
 
   has_many :articles, dependent: :destroy
+  before_save :set_default_city
 
   # validates :city, presence: true, dependent: :destroy
 
@@ -50,6 +51,10 @@ class User < ApplicationRecord
       user.save
     end
     return user
+  end
+
+  def set_default_city
+    self.city ||= "marseille"
   end
 end
 
