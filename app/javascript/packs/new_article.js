@@ -38,3 +38,15 @@ wearableTypeSelector.addEventListener("change", (event) => {
   const wearableSelector = document.getElementById(type);
   wearableSelector.classList.remove("hidden");
 })
+
+
+const wearableImageClass = document.querySelector("img-article");
+const wearableSelectorImage = document.getElementById("article_wearable_id");
+
+if (wearableImage) {
+  wearableSelectorImage.addEventListener("change", (event) => {
+    const wearableId = event.target.value;
+    const wearableCode = wearable[wearableId];
+    wearableImage
+  })
+}

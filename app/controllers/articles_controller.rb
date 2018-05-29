@@ -8,15 +8,6 @@ class ArticlesController < ApplicationController
 
     @wearable_types = ["Top", "Bottom", "Coat", "Shoe", "Dress"]
 
-
-
-    # @wearables = []
-    # @wearables << Top.all
-    # @wearables << Bottom.all
-    # @wearables << Dress.all
-    # @wearables << Coat.all
-    # @wearables << Shoe.all
-    # @wearables.flatten!
     @tops = Top.all
     @bottoms = Bottom.all
     @dresses = Dress.all
