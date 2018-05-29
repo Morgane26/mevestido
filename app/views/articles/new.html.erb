@@ -1,6 +1,7 @@
 
 <div class="background2 pt" style="background-image: url('<%= image_path("background_p2.jpg") %>')">
 
+  <h1>Create your dressing</h1>
 
   <div class="container">
     <h1 class="mt0 h3">Create Your dressing</h1>
@@ -53,7 +54,11 @@
       <div class="row" id="wearable_image_create_dressing">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 
-            <div class="div-article-new" id="div-article-color" data-colors="<%= @js_colors.to_json %>">
+            <div
+              class="div-article-new"
+              id="div-article-color"
+              data-colors="<%= @js_colors.to_json %>"
+              data-images="<%= @js_images.to_json %>">
 
               <%= image_tag "chemise_croptop.png",
                   alt: "Chemise",
@@ -86,18 +91,29 @@
     </div>
       <div class="row" id="wearable_option_create_dressing">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" >
+
           <div class="submit-edit">
             <%= f.button :submit,  :class => "btn  btn-vestido btn-block"%>
+
+          <div class="submit-edit-dressing">
+            <%= f.button :submit %>
+
           </div>
         <% end %>
       <br>
+      <div class="paf">
+          <%= link_to "Your Dressing", articles_path, :class => "btn btn-success pif"%>
+        </div>
       </div>
     </div>
 
+
       <div>
         <%= link_to "Your Dressing", articles_path, :class => "btn btn-vestido btn-block"%>
+
+        <br>
+
       </div>
     </div>
   </div>
-</div>
 </div>

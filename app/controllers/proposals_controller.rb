@@ -28,6 +28,7 @@ class ProposalsController < ApplicationController
   def results
     # appel à l'api de météo pour récupérer la température en integer
     weather_instance = Weather.new(current_user.city)
+        # weather_instance.save!
     @meteo = weather_instance.call
     # mapping de température avec la saison
     @season = temp_to_meteo(@meteo.temperature)

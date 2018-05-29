@@ -19,6 +19,10 @@ end
 
 
 
+  # get "proposals/plan", to: "proposals#plan"
+  # post "proposals/results", to: "proposals#results"
+
+
 
 
   # get  "artciles", to: "articles#index"

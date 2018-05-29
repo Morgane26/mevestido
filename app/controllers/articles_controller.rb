@@ -8,15 +8,6 @@ class ArticlesController < ApplicationController
 
     @wearable_types = ["Top", "Bottom", "Coat", "Shoe", "Dress"]
 
-
-
-    # @wearables = []
-    # @wearables << Top.all
-    # @wearables << Bottom.all
-    # @wearables << Dress.all
-    # @wearables << Coat.all
-    # @wearables << Shoe.all
-    # @wearables.flatten!
     @tops = Top.all
     @bottoms = Bottom.all
     @dresses = Dress.all
@@ -29,11 +20,16 @@ class ArticlesController < ApplicationController
     @colors.each do |color|
       @js_colors[color.id] = color.hex
     end
+
+    @js_images = {}
+    @wearable_types.each do |type|
+      @js_images[type] = type.constantize.images
+    end
   end
 
   def create
     @article = Article.new(article_params)
-    # binding.pry
+
     wearable = wearable_type.find(wearable_id)
     @article.wearable = wearable
     @article.user = current_user

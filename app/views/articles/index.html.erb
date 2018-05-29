@@ -1,23 +1,20 @@
-<h1> All of yours clothes </h1>
+<h1>Your Dressing</h1>
 
   <div class="container">
     <div class="row">
-
-      <% @article.each do |article_by_article| %>
+      <% @article.each do |article| %>
         <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="card">
-
-
-
+          <div class="card-article-dressing mb">
+            <%# cl_image_tag(article.image, width: 350, height: 350, crop: :fill)  %>
             <div class="card-body">
-              <h5 class="card-title"><%= @article.all %></h5>
-              <%= link_to "Add a new clothe", articles_path, :class => "btn btn-primary "%>
-              <%= link_to "Finished", articles_path, :class => "btn btn-primary" %>
-              <br>
+                <p class="card-title"><%= article.season %></p>
+                <p class="card-text"> <%= article.usage %> </p>
             </div>
             <br>
           </div>
         </div>
       <%end%>
     </div>
+      <%= link_to "Add a new clothe", articles_path, :class => "btn btn-primary "%>
+      <%= link_to "Finished", articles_path, :class => "btn btn-primary" %>
   </div>
