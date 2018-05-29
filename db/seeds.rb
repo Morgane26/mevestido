@@ -98,7 +98,7 @@ bottom1 = Bottom.create!(kind: :jean)
 bottom2 = Bottom.create!(kind: :legging)
 bottom3 = Bottom.create!(kind: :jogging)
 bottom4 = Bottom.create!(kind: :short)
-bottom5 = Bottom.create!(kind: :skirt)
+bottom5 = Bottom.create!(kind: :short_skirt)
 bottom6 = Bottom.create!(kind: :chino)
 
 #     COATS
@@ -112,7 +112,7 @@ coat4 = Coat.create!(kind: :long)
 puts "create dresses"
 dress1 = Dress.create!(kind: :long)
 dress2 = Dress.create!(kind: :midi)
-dress3 = Dress.create!(kind: :courte)
+dress3 = Dress.create!(kind: :short)
 
 #     TOP
 puts "create tops"

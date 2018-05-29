@@ -1,6 +1,9 @@
+import _ from "lodash"
+
 const divColor = document.getElementById("div-article-color");
 const colorSelector = document.getElementById("article_color_id");
 const colors = JSON.parse(divColor.dataset.colors);
+const images = JSON.parse(divColor.dataset.images);
 
 if (divColor) {
   colorSelector.addEventListener("change", (event) => {
@@ -37,4 +40,25 @@ wearableTypeSelector.addEventListener("change", (event) => {
 
   const wearableSelector = document.getElementById(type);
   wearableSelector.classList.remove("hidden");
-})
+
+  selectors.forEach((selector) => {
+    selector.addEventListener("change", (event) => {
+      const kind = _.snakeCase(event.target.selectedOptions[0].text);
+      const image = images[type][kind];
+      const imageDiv = document.querySelector(".img-article");
+      imageDiv.src = image;
+    });
+  });
+});
+
+
+// const wearableImageClass = document.querySelector("img-article");
+// const wearableSelectorImage = document.getElementById("article_wearable_id");
+
+// if (wearableImage) {
+//   wearableSelectorImage.addEventListener("change", (event) => {
+//     const wearableId = event.target.value;
+//     const wearableCode = wearable[wearableId];
+//     wearableImage
+//   })
+// }

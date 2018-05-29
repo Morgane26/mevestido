@@ -19,6 +19,15 @@ class Coat < ApplicationRecord
   ]
 
   def name
-    "#{self.class}: #{kind.capitalize.gsub('_', ' ')}"
+    kind.capitalize.gsub('_', ' ')
+  end
+
+  def self.images
+    {
+      jean: ActionController::Base.helpers.asset_path("veste_jean.png"),
+      perfecto: ActionController::Base.helpers.asset_path("perfecto.png"),
+      trench: ActionController::Base.helpers.asset_path("trench.png"),
+      long: ActionController::Base.helpers.asset_path("manteau_long.png")
+    }
   end
 end
