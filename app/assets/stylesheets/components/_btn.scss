@@ -1,0 +1,7 @@
+.btn-vestido {
+  background:linear-gradient(lighten($brand-success, 10), $brand-success);
+  border-radius: 10px;
+  box-shadow: 0 2px 1px rgba(0,0,0,0.2);
+  border: linear-gradient(darken($brand-success, 10));
+  color:  #474447;
+}

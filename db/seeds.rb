@@ -127,7 +127,7 @@ top6 = Top.create!(kind: :sweat)
 #     ARTICLES
 puts "create article"
 article1 = Article.new(
-  season: :winter,
+  season: :summer,
   usage: :chill,
   user: user2,
   color: Color.first,
@@ -153,7 +153,7 @@ article3 = Article.new(
   user: user1,
   color: Color.last,
 )
-article3.wearable = coat3
+article3.wearable = dress1
 article3.save!
 
 
@@ -163,23 +163,73 @@ article4 = Article.new(
   user: user2,
   color: Color.first,
 )
-article4.wearable = dress1
+article4.wearable = coat1
 article4.save!
 
+article5 = Article.new(
+  season: :summer,
+  usage: :chill,
+  user: user2,
+  color: Color.last,
+)
+article5.wearable = top4
+article5.save!
 
+article6 = Article.new(
+  season: :summer,
+  usage: :chill,
+  user: user2,
+  color: Color.first,
+)
+article6.wearable = bottom2
+article6.save!
+
+article7 = Article.new(
+  season: :summer,
+  usage: :chill,
+  user: user2,
+  color: Color.first,
+)
+article7.wearable = shoes4
+article7.save!
 
 #       PROPOSAL 1
 puts "Mevestido is creating a new proposal"
 proposal1 = Proposal.create!(
-  meteo: :winter,
+  meteo: :summer,
   usage: :chill,
 )
 #   Outfit du proposal 1
-outfit = Outfit.create!(
+Outfit.create!(
   proposal: proposal1,
-  article: article4,
+  article: article3,
 )
 
+Outfit.create!(
+  proposal: proposal1,
+  article: article1,
+)
+
+proposal2 = Proposal.create!(
+  meteo: :summer,
+  usage: :chill,
+)
+
+#   Outfit du proposal 2
+Outfit.create!(
+  proposal: proposal2,
+  article: article5,
+)
+
+Outfit.create!(
+  proposal: proposal2,
+  article: article6,
+)
+
+Outfit.create!(
+  proposal: proposal2,
+  article: article7,
+)
 # #     PROPOSAL 2
 # proposal2 = Proposal.create!(
 #   meteo: :summer,
@@ -234,6 +284,7 @@ puts "#{Color.count} colors created"
 puts "#{User.count} users created"
 puts "#{Shoe.count} shoes created"
 puts "#{Article.count} articles created"
+puts "#{Proposal.count} proposals created"
 
 
 
