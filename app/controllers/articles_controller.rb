@@ -20,6 +20,11 @@ class ArticlesController < ApplicationController
     @colors.each do |color|
       @js_colors[color.id] = color.hex
     end
+
+    @js_images = {}
+    @wearable_types.each do |type|
+      @js_images[type] = type.constantize.images
+    end
   end
 
   def create

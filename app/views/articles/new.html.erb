@@ -53,7 +53,11 @@
       <div class="row" id="wearable_image_create_dressing">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 
-            <div class="div-article-new" id="div-article-color" data-colors="<%= @js_colors.to_json %>">
+            <div
+              class="div-article-new"
+              id="div-article-color"
+              data-colors="<%= @js_colors.to_json %>"
+              data-images="<%= @js_images.to_json %>">
 
               <%= image_tag "chemise_croptop.png",
                   alt: "Chemise",
