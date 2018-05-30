@@ -1,20 +1,42 @@
-<h1>Your Dressing</h1>
+<div
+  class="background2"
+  style="background-image: url('<%= image_path("background_p2.jpg") %>')">
 
   <div class="container">
+    <h1>Your Dressing</h1>
     <div class="row">
       <% @article.each do |article| %>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="card-article-dressing mb">
-            <%# cl_image_tag(article.image, width: 350, height: 350, crop: :fill)  %>
-            <div class="card-body">
-                <p class="card-title"><%= article.season %></p>
-                <p class="card-text"> <%= article.usage %> </p>
+        <div class="col-xs-6">
+          <div class="card-article-dressing">
+            <div class="card-image"
+                 style="background-color: <%= article.color.hex %>">
+              <%= image_tag article.image,
+                    alt: "Article",
+                    width: 180,
+                    height: 280 %>
+              <div class="card-info" id="test">
+                <div class="infos">
+                  <p><%= article.season.capitalize %></p>
+                  <p><%= article.usage.capitalize %></p>
+                </div>
+              </div>
             </div>
-            <br>
           </div>
         </div>
       <%end%>
     </div>
-      <%= link_to "Add a new clothe", articles_path, :class => "btn btn-primary "%>
-      <%= link_to "Finished", articles_path, :class => "btn btn-primary" %>
+
+    <div class= "paf">
+      <p>
+        <%= link_to "Add a new clothe",
+              new_article_path,
+              class: "btn btn-success chat" %>
+      </p>
+      <p>
+        <%= link_to "See your proposals",
+              new_proposal_path,
+            class: "btn btn-success pif" %>
+      </p>
+    </div>
   </div>
+</div>

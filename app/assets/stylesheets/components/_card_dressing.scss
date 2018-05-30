@@ -1,5 +1,55 @@
 .card-article-dressing {
-  background-color: white;
-  height: 350px;
-  width: 250px;
+  position: relative;
+  height: 280px;
+  width: 180px;
+  margin-bottom: 20px;
+  border-radius: 60px;
 }
+
+.card-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 60px;
+}
+
+.card-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.8);
+  font-weight: bold;
+  border-radius: 60px;
+
+  .infos {
+    text-align: center;
+  }
+}
+
+.card-info:hover {
+  opacity: 1;
+  transition: .5s all ease;
+  border-radius: 60px;
+}
+
+.chat {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.chat:hover {
+  width: 350px;
+}
+
+#test {
+  border-radius: 60px;
+}
+// .card-body:active {
+//   background-color: black;
+//   color: white;
+
