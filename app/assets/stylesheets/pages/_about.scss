@@ -1,3 +1,20 @@
+.bottomcard {
+
+background-color: #9A9294;
+height: 100px;
+width: 100%;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+position: absolute;
+bottom: 0;
+left: 0;
+display: flex;
+align-items: center;
+justify-content: space-around;
+
+}
+
+
 .padded {
   padding: 30px 0;
 }
@@ -19,12 +36,16 @@
 
 .profile .main .description, .stat{
   background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
   padding: 50px;
   margin: 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  height: 600px;
+
+  border-radius: 20px;
+  position: relative;
 }
 
 
@@ -32,17 +53,6 @@
   color: rgba(0,0,0,0.6);
 }
 
-.profile .btn {
-  border-radius: 0;
-  border: none;
-  width: 100%;
-  margin-top: 30px;
-  background: #37B686;
-}
-.profile .btn:hover {
-  background: #37B686;
-  opacity: 0.7;
-}
 .stat h3 {
   color: rgba(0,0,0,0.9);
   font-size: 28px;
@@ -52,6 +62,8 @@
   color: rgba(0,0,0,0.25);
   font-size: 19px;
 }
+
+
 .description h3 {
   color: #e74c3c;
   font-size: 28px;
@@ -70,10 +82,12 @@
     font-size: 20px;
     text-align: center;
     text-transform: uppercase;
+
 }
 
 .your-avatar {
   border-radius: 50px;
+  height: 200px;
 }
 
 

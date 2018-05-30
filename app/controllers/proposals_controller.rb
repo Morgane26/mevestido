@@ -34,7 +34,7 @@ class ProposalsController < ApplicationController
     @season = temp_to_meteo(@meteo.temperature)
     #recherche des propositions correspondantes à la saison et l'usage
     #@proposals = Proposal.all.where(meteo: season, usage: params[:proposal][:usage])
-    @proposals = Proposal.all.where(meteo: @season, usage: params[:proposal][:usage])
+    @proposals = Proposal.all.where(meteo: @season, usage: params["usage"])
   end
 
 private

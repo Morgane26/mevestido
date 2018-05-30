@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :articles, only:[:index, :new, :create]
   resources :proposals, only:[:index, :new]
 
+  get "about", to: "pages#about"
   get "proposals/plan", to: "proposals#plan"
   post "proposals/results", to: "proposals#results"
 end
