@@ -40,7 +40,7 @@
 .img-article {
   height: 380px;
   width: 300px;
-  border-radius: 60px
+  border-radius: 60px;
 }
 
 .paf {
@@ -48,11 +48,15 @@
 }
 
 .pif {
- border-radius: 10px;
- background-color: #f8ceaf;
- box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
+  width: 250px;
+  border-radius: 10px;
+  background-color: #f8ceaf;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
 
+.pif:hover {
+  width: 350px;
+}
 
 .form-control-label .select .optional {
   font-family: "Lato";
