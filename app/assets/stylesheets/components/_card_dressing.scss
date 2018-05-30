@@ -1,35 +1,40 @@
 .card-article-dressing {
-  background-color: white;
-  height: 350px;
-  width: 250px;
+  position: relative;
+  height: 280px;
+  width: 180px;
   margin-bottom: 20px;
-  text-align: center;
+  border-radius: 10px;
 }
 
-.card-body {
-  background-color: white;
-  height: 350px;
-  width: 250px;
+.card-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
 
-.card-article-dressing :active {
-  p {
-    opacity: 1;
-    color: white;
-  }
-
-  background: grey;
-  opacity: 0.15;
-}
-
-
-.card-body p {
+.card-info {
   opacity: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.8);
+  font-weight: bold;
+  border-radius:10px;
+
+  .infos {
+    text-align: center;
+  }
 }
 
-.image-article-dressing {
-  height: 350px;
+.card-info:hover {
+  opacity: 1;
+  transition: .5s all ease;
 }
+
 
 
 // .card-body:active {

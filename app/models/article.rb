@@ -33,4 +33,8 @@ class Article < ApplicationRecord
     :sport,
   ]
 
+  def image
+    wearable.class.images[wearable.kind.to_sym]
+  end
+
 end

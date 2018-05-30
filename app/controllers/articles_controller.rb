@@ -1,14 +1,6 @@
 class ArticlesController < ApplicationController
   def index
     @article = Article.all
-
-
-    @wearable_types = ["Top", "Bottom", "Coat", "Shoe", "Dress"]
-
-    @js_images = {}
-    @wearable_types.each do |type|
-      @js_images[type] = type.constantize.images
-    end
   end
 
   def new
