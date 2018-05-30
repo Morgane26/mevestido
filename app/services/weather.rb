@@ -18,9 +18,9 @@ class Weather
    # ce dont on a besoin :) A REVOIR IN CASE OF
 
    OpenStruct.new(
-    weather_icon: data["weather"]["icon"],
-    weather_code: data["weather"]["code"],
-    weather_description: data["weather"]["description"],
+    icon: data["weather"]["icon"],
+    description: data["weather"]["description"],
+    temperature: data["temp"]
    #   max_temp: data["max_temp"],
    #   min_temp: data["min_temp"],
    #   temp: data["temp"],

@@ -1,24 +1,19 @@
 .footer {
-  position:absolute;
   background: #F4F4F4;
   align-items: center;
   justify-content: space-between;
-
-  margin-left: 450px;
-  position: fixed;
+  width: 100%;
   bottom: 0;
-
-
-
-
-
-  padding: 50px;
+  padding: 25px;
   color: rgba(0,0,0,0.3);
 }
+
+
 .footer-links {
-  display: flex;
-  align-items: center;
+  align: center;
 }
+
+
 .footer-links a {
   color: black;
   opacity: 0.15;

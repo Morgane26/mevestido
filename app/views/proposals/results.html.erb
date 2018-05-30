@@ -1,3 +1,14 @@
-<% @proposals.each do |proposal| %>
-  <%= proposal.id %>
+<h1>
+A marseille c'est le <%= @season %>,  il fait : <%= @meteo.temperature %>°C et l'atmosphère est à la <%= @meteo.description %>
+<img src="https://www.weatherbit.io//static/img/icons/<%= @meteo.icon %>.png">
+</h1>
+
+<h2>On vous recommande :</h2>
+<% @proposals.each_with_index do |proposal, index| %>
+  <p>Proposal n° <%= index +1  %></p>
+  <ul>
+  <% proposal.articles.each do |article| %>
+    <li>Un(e) <%= article.wearable_type %> : <%= article.wearable.kind %> couleur <%= article.color.name %></li>
+  <% end %>
+  </ul>
 <% end %>
