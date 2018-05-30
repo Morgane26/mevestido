@@ -28,5 +28,4 @@ class Proposal < ApplicationRecord
     :sport,
   ]
 
-
 end
