@@ -40,7 +40,7 @@ class ProposalsController < ApplicationController
 private
 
   def temp_to_meteo(t)
-    if t > 19
+    if t > 17
       "summer"
     elsif t > 12
       "spring"
