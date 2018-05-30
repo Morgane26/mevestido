@@ -3,13 +3,14 @@
   -webkit-backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .proposal-card {
   border-radius: 20px;
+  position: relative;
 }
 
 .proposals-title {
-  font-style: italic;
   font-weight: lighter;
 }
