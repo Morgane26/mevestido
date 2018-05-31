@@ -1,3 +1,12 @@
+<div class="meteo">
+  <h2>🔆</h2>
+  <h3>
+    It's <strong><%= @season %></strong>, temperature will be <strong><%= @meteo.temperature %>°C</strong>
+  </h3>
+</div>
+
+<h2>To <%= @usage %>, we recommend: </h2>
+
 <div class="container">
   <h3> Here it's the <%= @season %>, the temperature is around: <%= @meteo.temperature %>°C, atmosphere is <%= @meteo.description %>
   <img src="https://www.weatherbit.io//static/img/icons/<%= @meteo.icon %>.png"> </h3>

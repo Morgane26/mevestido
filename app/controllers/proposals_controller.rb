@@ -32,10 +32,12 @@ class ProposalsController < ApplicationController
         # weather_instance.save!
     @meteo = weather_instance.call
     # mapping de température avec la saison
-    @season = temp_to_meteo(@meteo.temperature)
+    # @season = temp_to_meteo(@meteo.temperature)
+    @season = temp_to_meteo(21.2)
     #recherche des propositions correspondantes à la saison et l'usage
     #@proposals = Proposal.all.where(meteo: season, usage: params[:proposal][:usage])
     @proposals = Proposal.all.where(meteo: @season, usage: params["usage"])
+
   end
 
 private
