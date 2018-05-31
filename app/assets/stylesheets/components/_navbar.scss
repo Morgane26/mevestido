@@ -1,11 +1,10 @@
 /* Main navbar */
 
 .banner {
-  background-image: url("images/logo.png");
     background-position: top;
-        background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 90px);
 }
 
 .navbar-wagon {
@@ -19,7 +18,10 @@
   justify-content: space-between;
 }
 
+
+
 /* Logo */
+
 .navbar-wagon-brand img {
   height: 90px;
 }
@@ -29,6 +31,7 @@
   height: 35px;
   width: 35px;
   border-radius: 50%;
+  background-position: right,
 }
 
 /* Right section */

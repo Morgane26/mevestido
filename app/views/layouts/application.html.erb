@@ -11,15 +11,22 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
 
 
+  <div class="site-wrapper">
+    <div class="site-wrapper-header">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
+    </div>
+    <div class="site-wrapper-content site-wrapper-background" style="<%= yield :background_image %>">
+      <%= yield %>
+    </div>
+    <div class="site-wrapper-footer">
+      <%= render 'shared/footer' %>
+    </div>
+  </div>
 
 
-
-    <%= yield %>
-    <%= render 'shared/footer' %>
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>

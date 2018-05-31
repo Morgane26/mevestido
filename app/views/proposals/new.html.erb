@@ -1,4 +1,6 @@
-<div class="background2" style="background-image: url('<%= image_path("background_p2.jpg") %>')">
+<% content_for :background_image do %>
+  background-image: url('<%= image_path("background_p2.jpg") %>')
+<% end %>
 
   <div class="container">
 
@@ -32,7 +34,6 @@
         </div>
       </div>
   </div>
-</div>
 
 
 
