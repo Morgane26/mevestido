@@ -1,0 +1,20 @@
+.site-wrapper{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+.site-wrapper-content{
+  flex: 1;
+}
+
+.site-wrapper-header{
+  z-index: 100;
+}
+
+.site-wrapper-background{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
