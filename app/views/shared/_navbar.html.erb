@@ -1,19 +1,21 @@
-<div class="navbar-wagon">
+<div class="navbar-mevestido navbar-mevestido-fixed">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+  <%= link_to root_path, class: "mevestido-brand" do %>
   <%= image_tag "logo.png", height: 50 %>
   <% end %>
 
 
   <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+  <div class="navbar-mevestido-right hidden-xs hidden-sm">
+<!--   <div class="col-xs-6 col-sm-4"> -->
 
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Your dressing", "articles/new", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Your plan", "proposals", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Your profile", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "All of your clothes", "articles/new", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "What are yours plans for today ?", "proposals", class: "navbar-wagon-item navbar-wagon-link" %>
+<!--       <%# link_to "Your profile", "#", class: "navbar-wagon-item navbar-wagon-link" %> -->
+      <%=link_to t(".sign_in", default: "Meet the Team"), about_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -44,13 +46,13 @@
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
- <%#link_to t(".sign_in", default: "Meet the Team"), about_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%#link_to t(".sign_in", default: "Meet the Team"), about_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% end %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
+<!--   <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
@@ -59,7 +61,26 @@
         <li><a href="#">Other one</a></li>
       </ul>
     </div>
-  </div>
-</div>
+  </div> -->
 
+
+    <div class="dropdown text-blue-dark hidden-md hidden-lg">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars text-blue-dark"></i></a>
+      <ul class="dropdown-menu dropdown-menu-right navbar-bruno-dropdown-menu">
+        <li>
+            <a class="navbar-bruno-item navbar-bruno-link" href="/users/sign_up">S&#39;inscrire</a>
+            <a class="navbar-bruno-item navbar-bruno-link" href="/users/sign_in">Connexion</a>
+        </li>
+         <li>
+          <a class="navbar-bruno-item navbar-bruno-link" href="/how_it_works">Comment ça marche</a>
+          <a class="navbar-bruno-item navbar-bruno-link" href="/pricing">Tarifs</a>
+          <a class="navbar-bruno-item navbar-bruno-link" target="_blank" href="https://hibruno.zendesk.com/hc/">Aide</a>
+          <a class="navbar-bruno-item navbar-bruno-link" href="/about">À propos</a>
+          <a class="navbar-bruno-item navbar-bruno-link" href="http://blog.hibruno.com/">Blog</a>
+        </li>
+
+      </ul>
+    </div>
+
+</div>
 
