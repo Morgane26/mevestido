@@ -15,6 +15,9 @@ class Dress < ApplicationRecord
     :long,
     :midi,
     :short,
+    :night,
+    :jumpsuit,
+    :playsuit,
   ]
 
   def name
@@ -23,9 +26,12 @@ class Dress < ApplicationRecord
 
   def self.images
     {
-      long: ActionController::Base.helpers.asset_path("robe_longue_s.png"),
-      midi: ActionController::Base.helpers.asset_path("robe_mc.png"),
-      short: ActionController::Base.helpers.asset_path("robe_night.png")
+      long: ActionController::Base.helpers.asset_path("robe_deb_slim.png"),
+      midi: ActionController::Base.helpers.asset_path("robe_deb.png"),
+      short: ActionController::Base.helpers.asset_path("robe_courte.png"),
+      night: ActionController::Base.helpers.asset_path("robe_soir.png"),
+      jumpsuit: ActionController::Base.helpers.asset_path("combi_pant.png"),
+      playsuit: ActionController::Base.helpers.asset_path("combi_short_deb.png"),
     }
   end
 end

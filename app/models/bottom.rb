@@ -14,12 +14,12 @@ class Bottom < ApplicationRecord
   enum kind: [
     :jean,
     :jean_high_waisted,
-    :legging,
     :jogging,
+    :short_jean,
     :short,
+    :chino,
     :short_skirt,
     :long_skirt,
-    :chino,
   ]
 
   # Do not use
@@ -29,14 +29,14 @@ class Bottom < ApplicationRecord
 
   def self.images
     {
-      jean: ActionController::Base.helpers.asset_path("shorty.png"),
+      jean: ActionController::Base.helpers.asset_path("jean_tb.png"),
       jean_high_waisted: ActionController::Base.helpers.asset_path("jean_th.png"),
-      legging: ActionController::Base.helpers.asset_path("trench.png"),
-      jogging: ActionController::Base.helpers.asset_path("pant_jogg.png"),
+      jogging: ActionController::Base.helpers.asset_path("jogg_pant.png"),
+      short_jean: ActionController::Base.helpers.asset_path("short_jean_th.png"),
       short: ActionController::Base.helpers.asset_path("short_noeud.png"),
-      short_skirt: ActionController::Base.helpers.asset_path("jupe_plisse_courte.png"),
-      long_skirt: ActionController::Base.helpers.asset_path("jupe_plisse_longue.png"),
-      chino: ActionController::Base.helpers.asset_path("pant_droit.png")
+      short_skirt: ActionController::Base.helpers.asset_path("jupe_volant.png"),
+      long_skirt: ActionController::Base.helpers.asset_path("jupe_longue_plisse.png"),
+      chino: ActionController::Base.helpers.asset_path("pant_classic.png")
     }
   end
 

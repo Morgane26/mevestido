@@ -11,8 +11,8 @@
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
-      <%= link_to "Your dressing", "articles/new", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Your plan", "proposals", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Your dressing", new_article_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Your plan", new_proposal_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Your profile", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
@@ -44,7 +44,7 @@
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
- <%#link_to t(".sign_in", default: "Meet the Team"), about_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%#link_to t(".sign_in", default: "Meet the Team"), about_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% end %>
   </div>
@@ -54,9 +54,8 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><%= link_to "Outfit of the day", new_proposal_path %></li>
+        <li><%= link_to "Your dressing", articles_path %></li>
       </ul>
     </div>
   </div>

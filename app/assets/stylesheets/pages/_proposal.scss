@@ -6,9 +6,29 @@
   margin-bottom: 20px;
 }
 
-.proposal-card {
+.proposal-card-work {
   border-radius: 20px;
   position: relative;
+  background-image: url("icone_work.png");
+}
+
+.proposal-card-chill {
+  border-radius: 20px;
+  position: relative;
+  background-image: url("icone_chill.png");
+}
+
+.proposal-card-sport {
+  border-radius: 20px;
+  position: relative;
+  background-image: url("icone_sport.png");
+}
+
+.proposal-card-night {
+  border-radius: 20px;
+  position: relative;
+  background-image: url("icone_night.png");
+  background-position: cover;
 }
 
 .proposals-title {
