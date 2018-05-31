@@ -12,9 +12,9 @@ class Top < ApplicationRecord
   has_many :articles, as: :wearable
 
   enum kind: [
-    :tee_shirt,
-    :debardeur,
-    :chemise,
+    :t_shirt,
+    :top,
+    :shirt,
     :crop_top,
     :pull,
     :sweat,
@@ -26,12 +26,12 @@ class Top < ApplicationRecord
 
   def self.images
     {
-      tee_shirt: ActionController::Base.helpers.asset_path("tshirt_mc.png"),
-      debardeur: ActionController::Base.helpers.asset_path("deb.png"),
-      chemise: ActionController::Base.helpers.asset_path("chemise_croptop.png"),
-      crop_top: ActionController::Base.helpers.asset_path("tshirt_croptop.png"),
-      pull: ActionController::Base.helpers.asset_path("pull_over.png"),
-      sweat: ActionController::Base.helpers.asset_path("hoodie_zip.png")
+      t_shirt: ActionController::Base.helpers.asset_path("tshirt_mc.png"),
+      top: ActionController::Base.helpers.asset_path("deb.png"),
+      shirt: ActionController::Base.helpers.asset_path("chemise_classic.png"),
+      crop_top: ActionController::Base.helpers.asset_path("croptop.png"),
+      pull: ActionController::Base.helpers.asset_path("sweat.png"),
+      sweat: ActionController::Base.helpers.asset_path("hoodie.png")
     }
   end
 

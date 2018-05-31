@@ -94,19 +94,22 @@ puts "create shoes"
 shoes1 = Shoe.create!(kind: :baskets)
 shoes2 = Shoe.create!(kind: :sandals)
 shoes3 = Shoe.create!(kind: :heels)
-shoes4 = Shoe.create!(kind: :tongs)
+shoes4 = Shoe.create!(kind: :mules)
 shoes5 = Shoe.create!(kind: :loafers)
+shoes6 = Shoe.create!(kind: :boots)
 
 #     BOTTOMS
 #     All of the bottoms that we had in pictures are here .....
 puts "create bottom"
 
 bottom1 = Bottom.create!(kind: :jean)
-bottom2 = Bottom.create!(kind: :legging)
+bottom2 = Bottom.create!(kind: :jean_high_waisted)
 bottom3 = Bottom.create!(kind: :jogging)
-bottom4 = Bottom.create!(kind: :short)
-bottom5 = Bottom.create!(kind: :short_skirt)
+bottom4 = Bottom.create!(kind: :short_jean)
+bottom5 = Bottom.create!(kind: :short)
 bottom6 = Bottom.create!(kind: :chino)
+bottom7 = Bottom.create!(kind: :short_skirt)
+bottom8 = Bottom.create!(kind: :long_skirt)
 
 #     COATS
 #     All of the coats that we had in pictures are here .......
@@ -124,14 +127,17 @@ puts "create dresses"
 dress1 = Dress.create!(kind: :long)
 dress2 = Dress.create!(kind: :midi)
 dress3 = Dress.create!(kind: :short)
+dress4 = Dress.create!(kind: :night)
+dress5 = Dress.create!(kind: :jumpsuit)
+dress6 = Dress.create!(kind: :playsuit)
 
 #     TOP
 #     All of the tops that we had in pictures are here ........
 puts "create tops"
 
-top1 = Top.create!(kind: :tee_shirt)
-top2 = Top.create!(kind: :debardeur)
-top3 = Top.create!(kind: :chemise)
+top1 = Top.create!(kind: :t_shirt)
+top2 = Top.create!(kind: :top)
+top3 = Top.create!(kind: :shirt)
 top4 = Top.create!(kind: :crop_top)
 top5 = Top.create!(kind: :pull)
 top6 = Top.create!(kind: :sweat)

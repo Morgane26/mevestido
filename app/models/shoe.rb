@@ -13,9 +13,10 @@ class Shoe < ApplicationRecord
 
   enum kind: [
     :baskets,
+    :boots,
     :sandals,
     :heels,
-    :tongs,
+    :mules,
     :loafers,
   ]
 
@@ -25,12 +26,12 @@ class Shoe < ApplicationRecord
 
   def self.images
     {
-      baskets: ActionController::Base.helpers.asset_path("deb_fin.png"),
-      tennis: ActionController::Base.helpers.asset_path("basket2.png"),
-      sandals: ActionController::Base.helpers.asset_path("sandale1.png"),
-      heels: ActionController::Base.helpers.asset_path("talon1.png"),
-      tongs: ActionController::Base.helpers.asset_path("chemise_croptop.png"),
-      loafers: ActionController::Base.helpers.asset_path("TEST1.png")
+      baskets: ActionController::Base.helpers.asset_path("basket1.png"),
+      boots: ActionController::Base.helpers.asset_path("bottine.png"),
+      sandals: ActionController::Base.helpers.asset_path("k_jacques.png"),
+      heels: ActionController::Base.helpers.asset_path("talon4.png"),
+      mules: ActionController::Base.helpers.asset_path("sandale2.png"),
+      loafers: ActionController::Base.helpers.asset_path("mocassin.png")
     }
   end
 
