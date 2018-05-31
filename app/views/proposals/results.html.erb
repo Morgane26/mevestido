@@ -1,32 +1,19 @@
 <div class="container">
+  <h3> Here it's the <%= @season %>, the temperature is around: <%= @meteo.temperature %>°C, atmosphere is <%= @meteo.description %>
+  <img src="https://www.weatherbit.io//static/img/icons/<%= @meteo.icon %>.png"> </h3>
+  <h3>To <%= @usage %>, we recommend: </h3>
   <div class="row">
-    <div class="col-xs-12">
-      <h3> Here it's the <%= @season %>,
-        the temperature is around: <%= @meteo.temperature %>°C,
-        atmosphere is <%= @meteo.description %>
+  <% @proposals.each_with_index do |proposal, index| %>
+    <div class="col-xs-6">
+      <p>Proposal n° <%= index +1  %></p>
+      <% proposal.articles.each do |article| %>
+        <!-- <div class="article-outfit" style="background-color: <%= article.color.hex %>; background-image: url('<%= image_path(article.image) %>')"> -->
 
-      <img src="https://www.weatherbit.io//static/img/icons/<%= @meteo.icon %>.png"> </h3>
-
-      <h3>To <%= @usage %>, we recommend: </h3>
-
-      <% @proposals.each_with_index do |proposal, index| %>
-      <div class="col-xs-6">
-        <p>Proposal n° <%= index +1  %></p>
-          <div class="card-article-dressing">
-          <% proposal.articles.each do |article| %>
-           <div class="card-image"
-                 style="background-color: <%= article.color.hex %>">
-          <!--<li>Un(e) <%# article.wearable_type %> : <%= article.wearable.kind %> couleur <%# article.color.name %></li> -->
-
-           <%= image_tag article.image,
-                alt: "Article",
-                width: 180,
-                height: 280 %>>
-          </div>
-          <% end %>
+        <div class="article-outfit" style="background-color: <%= article.color.hex %>">
+          <%= image_tag article.image, alt: "Article", class:"sape" %>
         </div>
-      </div>
       <% end %>
     </div>
+  <% end %>
   </div>
 </div>

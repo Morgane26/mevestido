@@ -26,6 +26,7 @@ class ProposalsController < ApplicationController
   end
 
   def results
+    @usage = params["usage"]
     # appel à l'api de météo pour récupérer la température en integer
     weather_instance = Weather.new(current_user.city)
         # weather_instance.save!
