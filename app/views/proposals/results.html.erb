@@ -1,14 +1,19 @@
-<h1>
-Here it's the <%= @season %>,  the temperature is around: <%= @meteo.temperature %>°C, atmosphere is <%= @meteo.description %>
+<h3>
+Here it's the <%= @season %>, the temperature is around: <%= @meteo.temperature %>°C, atmosphere is <%= @meteo.description %>
 <img src="https://www.weatherbit.io//static/img/icons/<%= @meteo.icon %>.png">
-</h1>
+</h3>
 
-<h2>On vous recommande :</h2>
-<% @proposals.each_with_index do |proposal, index| %>
-  <p>Proposal n° <%= index +1  %></p>
-  <ul>
-  <% proposal.articles.each do |article| %>
-    <li>Un(e) <%= article.wearable_type %> : <%= article.wearable.kind %> couleur <%= article.color.name %></li>
-  <% end %>
-  </ul>
-<% end %>
+<h2>To <%= @usage %>, we recommend: </h2>
+
+<div class="container">
+  <div class="row">
+    <% @proposals.each_with_index do |proposal, index| %>
+      <p>Proposal n° <%= index +1  %></p>
+      <ul>
+      <% proposal.articles.each do |article| %>
+        <li>Un(e) <%= article.wearable_type %> : <%= article.wearable.kind %> couleur <%= article.color.name %></li>
+      <% end %>
+      </ul>
+    <% end %>
+  </div>
+</div>

@@ -1,51 +1,36 @@
 <div class="background2" style="background-image: url('<%= image_path("background_p2.jpg") %>')">
 
-
-
-<%= simple_form_for @proposal, url: proposals_results_path, method: :post  do |f| %>
-  <%= f.input :usage, collection: @usage_list %>
-  <%= f.submit %>
-  <% end %>
-
-
   <div class="container">
 
       <h1 class="h3 mt+ mb text-center text-bold text-italic">What are your plans today?</h1>
     <div class="proposal-wrap">
+
       <div class="row">
         <div class="col-xs-6 col-sm-4">
-          <div class="card proposal-card mb--" style="background-image: url('<%= image_path('icone_work.png') %>')">
-            <a href="toto.html" class="card-link"></a>
+          <div>
+              <%= button_to "Work 👩‍💻", {controller: "proposals", action: "results", usage: "work"}, method: :post, class: "card proposal-card mb--", style: "background-image: url('icone_work.png')" %>
           </div>
-          <div class="proposals-title mb text-center"> WORK </div>
-
+          <div class="proposals-title mb text-center"> WORK 👩‍💻</div>
         </div>
         <div class="col-xs-6 col-sm-4">
-          <div class="card proposal-card mb--" style="background-image: url('<%= image_path('icone_work.png') %>')">
-            <a href="toto.html" class="card-link"></a>
+          <div>
+              <%= button_to "Chill 🦄", {controller: "proposals", action: "results", usage: "chill"}, method: :post, class: "card proposal-card mb--", style: "background-image: url('icone_work.png')" %>
           </div>
-          <div class="proposals-title mb text-center"> WORK </div>
-
+          <div class="proposals-title mb text-center"> CHILL 🦄</div>
         </div>
         <div class="col-xs-6 col-sm-4">
-          <div class="card proposal-card mb--" style="background-image: url('<%= image_path('icone_work.png') %>')">
-            <a href="toto.html" class="card-link"></a>
+          <div>
+              <%= button_to "Night ✨", {controller: "proposals", action: "results", usage: "night"}, method: :post, class: "card proposal-card mb--", style: "background-image: url('icone_work.png')" %>
           </div>
-          <div class="proposals-title  text-center"> WORK </div>
-
+          <div class="proposals-title text-center"> NIGHT 🍸</div>
         </div>
         <div class="col-xs-6 col-sm-4">
-          <div class="card proposal-card mb--" style="background-image: url('<%= image_path('icone_work.png') %>')">
-            <a href="toto.html" class="card-link"></a>
+          <div>
+              <%= button_to "Sport 👟", {controller: "proposals", action: "results", usage: "sport"}, method: :post, class: "card proposal-card mb--", style: "background-image: url('icone_work.png')" %>
           </div>
-          <div class="proposals-title  text-center"> WORK </div>
-
+          <div class="proposals-title text-center"> SPORT 👟</div>
         </div>
       </div>
-
-
-
-    </div>
   </div>
 </div>
 
