@@ -1,18 +1,47 @@
-.article-outfit {
+.background {
   position: relative;
   width: 100%;
-  height:250px;
+  height: 250px;
+  width: 167px;
 
+  img {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.sape {
-  position:absolute;
-  top:0;
-  left:0;
-  width: 100%;
-}
+.outfit {
+  .background:first-child img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .background:first-child {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
 
-.proposal {
-  background-color: white;
-  border-radius: 20px;
+  .background:last-child img {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .background:last-child {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  .background:nth-child(2) {
+    z-index: 1000;
+    margin-bottom: -60px;
+  }
+
+  // .background::after {
+  //   content: "📘";
+  //   position: absolute;
+  //   top: 0px;
+  //   left: 50%;
+  // }
+
 }
