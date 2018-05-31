@@ -5,27 +5,32 @@
       It's <strong><%= @season %></strong>, temperature will be <strong><%= @meteo.temperature %>°C</strong>
     </h3>
   </div>
+  <div
+  class="background2"
+  style="background-image: url('<%= image_path("background_p2.jpg") %>')">
   <hr>
-  <h3 class="text-center mb+">To <%= @usage %>, we recommend: </h3>
-  <div class="row">
-    <% @proposals.each_with_index do |proposal, index| %>
-      <div class="col-xs-6">
-        <p class="text-center">Proposal n° <%= index +1  %></p>
-        <div class="outfit">
-          <% proposal.articles.each do |article| %>
-            <div class="background"
-                 style="background-color: <%= article.color.hex %>">
-              <%= image_tag article.image, alt: "Article", height: 250, width: 167 %>
-               <div class="card-info">
-                <div class="infos">
-                  <p><%= article.wearable.kind.capitalize %></p>
-                  <p><%= article.color.name.capitalize %></p>
+    <h3 class="text-center mb+">To <%= @usage %>, we recommend: </h3>
+    <div class="row">
+      <% @proposals.each_with_index do |proposal, index| %>
+        <div class="col-xs-6">
+          <p class="text-center">Proposal n° <%= index +1  %></p>
+          <div class="outfit">
+            <% proposal.articles.each do |article| %>
+              <div class="background"
+                   style="background-color: <%= article.color.hex %>">
+                <%= image_tag article.image, alt: "Article", height: 250, width: 167 %>
+                 <div class="card-info">
+                  <div class="infos">
+                    <p><%= article.wearable.kind.capitalize %></p>
+                    <p><%= article.color.name.capitalize %></p>
+                  </div>
                 </div>
               </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
+          <br>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
