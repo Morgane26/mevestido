@@ -6,31 +6,34 @@
   margin-bottom: 20px;
 }
 
-.proposal-card-work {
+.proposal-card-work,
+.proposal-card-chill,
+.proposal-card-sport,
+.proposal-card-night {
+  font-size: 24px;
+  font-weight: bold;
+  color: #292929;
   border-radius: 20px;
   position: relative;
-  background-image: url("icone_work.png");
+  background-size: cover;
+}
+
+.proposal-card-work {
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.2)), image-url("icone_work.png");
 }
 
 .proposal-card-chill {
-  border-radius: 20px;
-  position: relative;
-  background-image: url("icone_chill.png");
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.2)), image-url("icone_chill.png");
 }
 
 .proposal-card-sport {
-  border-radius: 20px;
-  position: relative;
-  background-image: url("icone_sport.png");
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.2)), image-url("icone_sport.png");
 }
 
 .proposal-card-night {
-  border-radius: 20px;
-  position: relative;
-  background-image: url("icone_night.png");
-  background-position: cover;
+  background-image: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.2)), image-url("icone_night.png");
 }
 
-.proposals-title {
-  font-weight: lighter;
-}
+// .proposals-title {
+//   font-weight: lighter;
+// }

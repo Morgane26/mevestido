@@ -1,12 +1,16 @@
-/* Main navbar */
-
 .banner {
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: calc(100vh - 90px);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: calc(100vh - 210px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
+/* Main navbar */
 .navbar-wagon {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
   background: white;
@@ -66,11 +70,15 @@
 .navbar-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: #999999 !important;
+  color: #999999;
   font-size: 17px !important;
   line-height: 22px !important;
   padding: 10px 20px;
   font-family: Open Sans;
+
+  &.main {
+    color: #292929 !important;
+  }
 }
 .navbar-wagon-dropdown-menu li > a:hover {
   background: transparent !important;

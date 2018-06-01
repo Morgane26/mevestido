@@ -5,3 +5,38 @@
   border: linear-gradient(darken($brand-success, 10));
   color:  #474447;
 }
+
+.btn-main {
+  background-color: $white-rose;
+  border-color: $white-rose;
+  color: #292929;
+  border-radius: 8px;
+}
+
+.btn-see {
+  background-color: white;
+  border-color: white;
+  color: #292929;
+  border-radius: 8px;
+}
+
+.btn-add {
+  background-color: #292929;
+  border-color: #292929;
+  color: white !important;
+  border-radius: 8px;
+}
+
+.btn-link {
+  background-color: transparent !important;
+  border-color: transparent !important;
+  color: black !important;
+  border-radius: 8px;
+}
+
+.btn-facebook {
+  background-color: #35519B !important;
+  border-color: #35519B !important;
+  color: white !important;
+  border-radius: 8px;
+}

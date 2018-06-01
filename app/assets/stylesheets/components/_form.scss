@@ -12,11 +12,6 @@ h2 {
 
 }
 
-// DEGUEULASSE
-// * {
-//   margin: auto;
-// }
-
 .log {
   text-decoration: none;
   text-align: center;
@@ -72,4 +67,11 @@ label {
     margin-bottom: 5px;
     font-family: Raleway;
     font-weight: 400;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

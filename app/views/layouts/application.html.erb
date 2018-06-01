@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:og="http://ogp.me/ns#" >
 <head>
+  <title>Me Vestido, don't loose your time to choose your clothes everyday</title>
+  <meta name="description" content="Me vestido is a web app which choose your clothes for you">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Me Vestido</title>
   <meta property="og:title" content="Me Vestido" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.mevestido.eu" />
-  <meta property="og:image"
+  <meta property="og:image">
   <%= csrf_meta_tags %>
   <%= action_cable_meta_tag %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= favicon_link_tag asset_path('favicon.png'), :rel => 'icon', :type =>  'image/png' %>
-  <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 </head>
 <body>
-
-
   <div class="site-wrapper">
     <div class="site-wrapper-header">
       <%= render 'shared/navbar' %>
@@ -29,9 +27,6 @@
       <%= render 'shared/footer' %>
     </div>
   </div>
-
-
-
   <%= javascript_include_tag 'application' %>
   <%= javascript_pack_tag 'application' %>
   <%= javascript_pack_tag 'new_article' %>

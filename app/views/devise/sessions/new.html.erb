@@ -1,30 +1,23 @@
-<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+<% content_for :background_image do %>
+  background-image: linear-gradient(to right bottom, #f9e5ae, #fbeabd, #fcf0cd, #fef5dc, #fffaec);
+<% end %>
 
-
-
-
-<div class="all-edit">
- <h2>Log in here Darling <i class="em em-closed_lock_with_key"></i></h2>
- <div style="width:70%">
+<div class="container">
+  <div class="row">
     <div class="col-xs-12">
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <div class="form-inputs">
-        <div class="input-edit">
-          <%= f.input :email, required: false, autofocus: true %>
-          <%= f.input :password, required: false %>
-          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-        </div>
-      </div>
-      <div class="form-actions">
-        <div class="submit-edit">
-          <%= f.button :submit, "Log in" %>
-        </div>
-      </div>
-    <% end %>
-    </div>
-    <div class="col-xs-12 log">
-      <br>
-      <p>Or</p>
+      <%= button_to omniauth_authorize_path(resource_name, "facebook"),
+          class: "btn btn-block btn-facebook mb mt+" do %>
+          <i class="fab fa-facebook-square"></i> Log in with Facebook
+      <% end %>
+
+      <h3 class="text-center">— Or —</h3>
+
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= f.input :email, required: false, autofocus: true %>
+        <%= f.input :password, required: false %>
+        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        <%= f.button :submit, "Log in 🔑", class: "btn btn-add btn-block" %>
+      <% end %>
       <%= render "devise/shared/links" %>
     </div>
   </div>
