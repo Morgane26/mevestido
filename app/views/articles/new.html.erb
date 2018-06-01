@@ -3,104 +3,84 @@
 <% end %>
 
 <div class="container">
-  <h1>Create your dressing</h1>
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-      <%= simple_form_for(@article) do |f| %>
-      <div class="">
-        <div class = "input-new-article">
+    <div class="col-xs-12">
+      <div class="centered">
+        <%= simple_form_for(@article) do |f| %>
+        <div class = "input-new-article mt">
           <%= f.input :wearable_type,
                 label: false,
                 collection: @wearable_types,
-                prompt: "Choose the type of the clothes" %>
-        </div>
-      </div>
-      <div class="" id="">
-        <div class = "input-new-article">
-          <%# f.association :wearable,
-              collection: @wearables,
-              prompt: "Select wearable" %>
+                prompt: "What's new?" %>
           <div class="hidden wearable" id="Top">
              <%= f.association :wearable,
               collection: @tops,
-              prompt: "Select top" %>
+              prompt: "What kind of top?",
+              label: false %>
           </div>
          <div class="hidden wearable" id="Dress">
             <%= f.association :wearable,
               collection: @dresses,
-              prompt: "Select dress" %>
+              prompt: "What kind of dress?",
+              label: false %>
          </div>
          <div class="hidden wearable" id="Bottom">
              <%= f.association :wearable,
               collection: @bottoms,
-              prompt: "Select wearable" %>
+              prompt: "What kind of bottom?",
+              label: false %>
          </div>
           <div class="hidden wearable" id="Coat">
             <%= f.association :wearable,
               collection: @coats,
-              prompt: "Select wearable" %>
+              prompt: "What kind of coat?",
+              label: false %>
           </div>
 
           <div class="hidden wearable" id="Shoe">
             <%= f.association :wearable,
               collection: @shoes,
-              prompt: "Select wearable" %>
+              prompt: "What kind of shoes?",
+              label: false %>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row" id="wearable_image_create_dressing">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 
-          <div
-            class="div-article-new"
-            id="div-article-color"
-            data-colors="<%= @js_colors.to_json %>"
-            data-images="<%= @js_images.to_json %>">
+        <div class = "input-new-article">
+          <%= f.association :color,
+              prompt: "What color is it?",
+              label: false %>
+        </div>
 
-            <%= image_tag "croptop.png",
-                alt: "croptop",
-                :class => "img-article" %>
-          </div>
+        <div
+          class="div-article-new"
+          id="div-article-color"
+          data-colors="<%= @js_colors.to_json %>"
+          data-images="<%= @js_images.to_json %>">
+
+          <%= image_tag "croptop.png",
+              alt: "croptop",
+              class: "img-article" %>
+        </div>
+
+        <div class = "input-new-article mt">
+          <%= f.input :season,
+              collection: Article.seasons.keys,
+              prompt: "What season is it for?",
+              label: false %>
+        </div>
+
+        <div class = "input-new-article">
+          <%= f.input :usage,
+              collection: Article.usages.keys,
+              prompt: "What is it for?",
+              label: false %>
+        </div>
+
+        <div class="centered">
+          <%= f.submit "Add article", class:"btn btn-add btn-block btn-lg mb mt" %>
+          <%= link_to "I'm done", articles_path, class: "btn btn-block btn-see mb"%>
         </div>
       </div>
     </div>
-
-  <div class="row" id="wearable_option_create_dressing">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-      <div class = "input-new-article">
-        <%= f.input :season,
-            collection: Article.seasons.keys,
-            prompt: "Select a season" %>
-      </div>
-
-      <div class = "input-new-article">
-
-        <%= f.association :color,
-            prompt: "Select a color" %>
-      </div>
-
-      <div class = "input-new-article">
-        <%= f.input :usage,
-            collection: Article.usages.keys,
-            prompt: "Select usage" %>
-      </div>
-    </div>
   </div>
-    <div class="row" id="wearable_option_create_dressing">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3" >
-        <div class="submit-edit-dressing">
-          <%= f.button :submit %>
-        </div>
-      <% end %>
-    <br>
-    <div class="paf">
-      <%= link_to "Your Dressing", articles_path, :class => "btn btn-success pif"%>
-    </div>
-    <br>
-    </div>
-  </div>
-  </div>
-</div>
+<% end %>
