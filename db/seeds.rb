@@ -85,8 +85,6 @@ colors.each do |color|
   Color.create!(name: color[0], hex: color[1])
 end
 
-
-
 #     SHOES ...................................................
 #     All of the shoes that we had in pictures are here .......
 puts "create shoes"
@@ -159,9 +157,9 @@ article1 = Article.new(
   season: :summer,
   usage: :chill,
   user: user2,
-  color: Color.find_by(name:"ivory"),
+  color: Color.find_by(name:"white"),
   )
-article1.wearable = top3
+article1.wearable = top1
 article1.save!
 
 
@@ -176,14 +174,14 @@ article2.save!
 
 
 
-article1 = Article.new(
+article111 = Article.new(
   season: :summer,
   usage: :chill,
   user: user2,
   color: Color.find_by(name:"white"),
   )
-article1.wearable = shoes1
-article1.save!
+article111.wearable = shoes1
+article111.save!
 
 # SHOE 1 + DRESS 1 correspondent a une proposal en entier .....
 #-------------------------------------------------------------------------------
@@ -278,10 +276,11 @@ article11 = Article.new(
   season: :summer,
   usage: :work,
   user: user2,
-  color: Color.find_by(name: "red"),
+  color: Color.find_by(name: "chocolate"),
   )
 article11.wearable = shoes6
 article11.save!
+
 
 
 # TOP 3 + BOTTOM 6 + SHOES 3 correspondent a un proposal en entier
@@ -300,7 +299,7 @@ article14 = Article.new(
   season: :summer,
   usage: :work,
   user: user2,
-  color: Color.find_by(name: "teal"),
+  color: Color.find_by(name: "red"),
   )
 article14.wearable = shoes3
 article14.save!
@@ -502,7 +501,7 @@ article30.save!
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
-#                         PROPOSAL 1 = WORK AT SUMMER
+#                         PROPOSALS WORK AT SUMMER
 #-------------------------------------------------------------------------------
 #       Creation de proposals pour la saison summer peu importe usage
 puts "Mevestido is creating a new proposal"
@@ -567,7 +566,7 @@ Outfit.create!(
 
 
 #-------------------------------------------------------------------------------
-#                         PROPOSAL 2 : CHILL AT SUMMER
+#                         PROPOSALS : CHILL AT SUMMER
 #-------------------------------------------------------------------------------
 
 proposal4 = Proposal.create!(
@@ -575,16 +574,21 @@ proposal4 = Proposal.create!(
   usage: :chill,
   )
 #   Outfit du proposal 1
+
 Outfit.create!(
   proposal: proposal4,
   article: article1,
   )
 
 Outfit.create!(
-  proposal: proposal1,
+  proposal: proposal4,
   article: article2,
   )
 
+Outfit.create!(
+  proposal: proposal4,
+  article: article111,
+  )
 
 #-------------------------------------------------------------------------------
 
