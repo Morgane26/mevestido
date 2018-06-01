@@ -49,7 +49,7 @@ user2 = User.create!(
 puts "create colors"
 
 colors = [
-  ["black", "#7c7575"],
+  ["deep grey", "#7c7575"],
   ["white", "#ffffff"],
   ["silver", "#F6F6F6"],
   ["grey", "#919190"],
@@ -78,7 +78,7 @@ colors = [
   ["chocolate", "#a55540"],
   ["beige", "#f3cd97"],
   ["ivory", "#fff2be"],
-  ["firebrick", "#fea386"],
+  ["firebrick", "#cb0101"],
 ]
 
 colors.each do |color|
@@ -269,7 +269,7 @@ article10 = Article.new(
   season: :summer,
   usage: :work,
   user: user2,
-  color: Color.find_by(name: "black")
+  color: Color.find_by(name: "deep grey")
   )
 article10.wearable = bottom6
 article10.save!
@@ -440,7 +440,7 @@ article25 = Article.new(
   season: :summer,
   usage: :night,
   user: user2,
-  color: Color.find_by(name:"black"),
+  color: Color.find_by(name:"deep grey"),
   )
 
   article25.wearable = shoes2
