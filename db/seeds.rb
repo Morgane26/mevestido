@@ -49,7 +49,7 @@ user2 = User.create!(
 puts "create colors"
 
 colors = [
-  ["deep grey", "#7c7575"],
+  ["black", "#2B2B2B"],
   ["white", "#ffffff"],
   ["silver", "#F6F6F6"],
   ["grey", "#919190"],
@@ -258,7 +258,7 @@ article9 = Article.new(
   season: :summer,
   usage: :work,
   user: user2,
-  color: Color.find_by(name:"lime"),
+  color: Color.find_by(name:"white"),
   )
 article9.wearable = top3
 article9.save!
@@ -267,7 +267,7 @@ article10 = Article.new(
   season: :summer,
   usage: :work,
   user: user2,
-  color: Color.find_by(name: "deep grey")
+  color: Color.find_by(name: "black")
   )
 article10.wearable = bottom6
 article10.save!
@@ -332,27 +332,27 @@ article15 = Article.new(
   season: :summer,
   usage: :sport,
   user: user2,
-  color: Color.find_by(name: "red"),
+  color: Color.find_by(name: "white"),
   )
-article15.wearable = bottom2
+article15.wearable = top1
 article15.save!
 
 article16 = Article.new(
   season: :summer,
   usage: :sport,
   user: user2,
-  color: Color.find_by(name: "light salmon"),
+  color: Color.find_by(name: "grey"),
   )
-article16.wearable = top6
+article16.wearable = bottom3
 article16.save!
 
 article17 = Article.new(
   season: :summer,
   usage: :sport,
   user: user2,
-  color: Color.find_by(name: "sky blue"),
+  color: Color.find_by(name: "white"),
   )
-article17.wearable = bottom4
+article17.wearable = shoes1
 article17.save!
 
 
@@ -373,18 +373,18 @@ article18 = Article.new(
     season: :summer,
     usage: :sport,
     user: user2,
-    color: Color.find_by(name:"aqua"),
+    color: Color.find_by(name:"black"),
     )
-  article19.wearable = bottom3
+  article19.wearable = bottom5
   article19.save!
 
   article20 = Article.new(
     season: :summer,
     usage: :sport,
     user: user2,
-    color: Color.find_by(name:"beige"),
+    color: Color.find_by(name:"red"),
     )
-  article20.wearable = bottom8
+  article20.wearable = shoes1
   article20.save!
 
 # TOP 1 + BOTTOM 3 + SHOES 1 correspondent a un proposal en entier
@@ -431,7 +431,7 @@ article24 = Article.new(
   color: Color.find_by(name: "gold"),
   )
 
-article24.wearable = dress6
+article24.wearable = dress3
 article24.save!
 
 
@@ -439,10 +439,10 @@ article25 = Article.new(
   season: :summer,
   usage: :night,
   user: user2,
-  color: Color.find_by(name:"deep grey"),
+  color: Color.find_by(name:"black"),
   )
 
-  article25.wearable = shoes2
+  article25.wearable = shoes4
   article25.save!
 
 
@@ -453,27 +453,27 @@ article26 = Article.new(
   season: :summer,
   usage: :night,
   user: user2,
-   color: Color.find_by(name:"aqua"),
+   color: Color.find_by(name:"white"),
   )
-article26.wearable = top4
+article26.wearable = top2
 article26.save!
 
 article27 = Article.new(
   season: :summer,
   usage: :night,
   user: user2,
-  color: Color.find_by(name: "olive"),
+  color: Color.find_by(name: "red"),
   )
-article27.wearable = bottom5
+article27.wearable = bottom7
 article27.save!
 
 article28 = Article.new(
   season: :summer,
   usage: :night,
   user: user2,
-  color: Color.find_by(name:"red"),
+  color: Color.find_by(name:"black"),
     )
-  article28.wearable = shoes4
+  article28.wearable = shoes3
   article28.save!
 
 # TOP 4 + BOTTOM 5 + SHOES 1 correspondent a un proposal en entier
@@ -616,9 +616,103 @@ Outfit.create!(
 #-------------------------------------------------------------------------------
 
 
+#-------------------------------------------------------------------------------
+#                         PROPOSALS : NIGHT AT SUMMER
+#-------------------------------------------------------------------------------
+
+proposal6 = Proposal.create!(
+  meteo: :summer,
+  usage: :night,
+  )
+#   Outfit du proposal 1
+
+Outfit.create!(
+  proposal: proposal6,
+  article: article24,
+  )
+
+Outfit.create!(
+  proposal: proposal6,
+  article: article25,
+  )
 
 
+#-------------------------------------------------------------------------------
 
+proposal7 = Proposal.create!(
+  meteo: :summer,
+  usage: :night,
+  )
+
+#   Outfit du proposal 2
+Outfit.create!(
+  proposal: proposal7,
+  article: article26,
+  )
+
+Outfit.create!(
+  proposal: proposal7,
+  article: article27,
+  )
+
+Outfit.create!(
+  proposal: proposal7,
+  article: article28,
+  )
+
+#-------------------------------------------------------------------------------
+
+
+#-------------------------------------------------------------------------------
+#                         PROPOSALS : SPORT AT SUMMER
+#-------------------------------------------------------------------------------
+
+proposal8 = Proposal.create!(
+  meteo: :summer,
+  usage: :sport,
+  )
+#   Outfit du proposal 1
+
+Outfit.create!(
+  proposal: proposal8,
+  article: article15,
+  )
+
+Outfit.create!(
+  proposal: proposal8,
+  article: article16,
+  )
+
+Outfit.create!(
+  proposal: proposal8,
+  article: article17,
+  )
+
+
+#-------------------------------------------------------------------------------
+
+proposal9 = Proposal.create!(
+  meteo: :summer,
+  usage: :sport,
+  )
+
+#   Outfit du proposal 2
+Outfit.create!(
+  proposal: proposal9,
+  article: article18,
+  )
+
+Outfit.create!(
+  proposal: proposal9,
+  article: article19,
+  )
+
+Outfit.create!(
+  proposal: proposal9,
+  article: article20,
+  )
+
+#-------------------------------------------------------------------------------
 
 
 
