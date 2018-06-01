@@ -3,13 +3,18 @@
 <% end %>
 
 <div class="container">
-  <h1>Hey I'm your dressing! 👗 </h1>
+  <h1 class="mt+ mb">Hey, I'm your dressing!</h1>
+  <div class="text-center">
+    <%= link_to "✨ Add something",
+        new_article_path,
+        class: "btn btn-add mb+" %>
+  </div>
   <div class="row">
     <% @article.each do |article| %>
       <div class="col-xs-6">
         <div class="card-article-dressing">
           <div class="card-image"
-               style="background-color: <%= article.color.hex %>">
+               style="background-image: radial-gradient(closest-side, <%= article.color.hex %>, <%= article.color.hex %>, <%= article.color.hex %>, <%= article.color.hex %>, <%= article.color.hex %>, <%= article.color.hex %>, white);">
             <%= image_tag article.image,
                   alt: "Article",
                   width: 180,
@@ -24,18 +29,5 @@
         </div>
       </div>
     <%end%>
-  </div>
-
-  <div class= "paf">
-    <p>
-      <%= link_to "Add a new clothe",
-            new_article_path,
-            class: "btn btn-success chat" %>
-    </p>
-    <p>
-      <%= link_to "See your proposals",
-            new_proposal_path,
-          class: "btn btn-success pif" %>
-    </p>
   </div>
 </div>

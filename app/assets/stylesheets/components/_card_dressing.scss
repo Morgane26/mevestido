@@ -4,31 +4,40 @@
   width: 180px;
   margin-bottom: 20px;
   border-radius: 60px;
-}
 
-.card-image {
-  height: 100%;
-  width: 100%;
-  border-radius: 60px;
-}
+  // div + div {
+  //   border: 10px solid red;
+  // }
 
-.card-info {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255,255,255,0.8);
-  font-weight: bold;
-  border-radius: 60px;
+  .card-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 60px;
 
-  .infos {
-    text-align: center;
+    img {
+      border-radius: 20px;
+    }
+  }
+
+  .card-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.8);
+    font-weight: bold;
+    border-radius: 60px;
+
+    .infos {
+      text-align: center;
+    }
   }
 }
+
 
 .card-info:hover {
   opacity: 1;
