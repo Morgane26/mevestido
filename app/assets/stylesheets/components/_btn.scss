@@ -5,3 +5,10 @@
   border: linear-gradient(darken($brand-success, 10));
   color:  #474447;
 }
+
+.btn-main {
+  background-color: $white-rose;
+  border-color: $white-rose;
+  color: #292929;
+  border-radius: 8px;
+}
