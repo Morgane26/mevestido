@@ -1,42 +1,41 @@
-<div
-  class="background2"
-  style="background-image: url('<%= image_path("background_p2.jpg") %>')">
+<% content_for :background_image do %>
+  background-image: linear-gradient(to right bottom, #f9e5ae, #fbeabd, #fcf0cd, #fef5dc, #fffaec);
+<% end %>
 
-  <div class="container">
-    <h1>Hey I'm your dressing! 👗 </h1>
-    <div class="row">
-      <% @article.each do |article| %>
-        <div class="col-xs-6">
-          <div class="card-article-dressing">
-            <div class="card-image"
-                 style="background-color: <%= article.color.hex %>">
-              <%= image_tag article.image,
-                    alt: "Article",
-                    width: 180,
-                    height: 280 %>
-              <div class="card-info" id="test">
-                <div class="infos">
-                  <p><%= article.season.capitalize %></p>
-                  <p><%= article.usage.capitalize %></p>
-                </div>
+<div class="container">
+  <h1>Hey I'm your dressing! 👗 </h1>
+  <div class="row">
+    <% @article.each do |article| %>
+      <div class="col-xs-6">
+        <div class="card-article-dressing">
+          <div class="card-image"
+               style="background-color: <%= article.color.hex %>">
+            <%= image_tag article.image,
+                  alt: "Article",
+                  width: 180,
+                  height: 280 %>
+            <div class="card-info" id="test">
+              <div class="infos">
+                <p><%= article.season.capitalize %></p>
+                <p><%= article.usage.capitalize %></p>
               </div>
             </div>
           </div>
         </div>
-      <%end%>
-    </div>
+      </div>
+    <%end%>
+  </div>
 
-    <div class= "paf">
-      <p>
-        <%= link_to "Add a new clothe",
-              new_article_path,
-              class: "btn btn-success chat" %>
-      </p>
-      <p>
-        <%= link_to "See your proposals",
-              new_proposal_path,
-            class: "btn btn-success pif" %>
-      </p>
-    </div>
+  <div class= "paf">
+    <p>
+      <%= link_to "Add a new clothe",
+            new_article_path,
+            class: "btn btn-success chat" %>
+    </p>
+    <p>
+      <%= link_to "See your proposals",
+            new_proposal_path,
+          class: "btn btn-success pif" %>
+    </p>
   </div>
 </div>
