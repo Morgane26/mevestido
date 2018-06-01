@@ -1,4 +1,4 @@
-.meteo {
+.results {
   text-align: center;
 
   h2 {
@@ -11,6 +11,16 @@
 
   h3 {
     animation-duration: 1.5s;
+    animation-name: slidein;
+  }
+
+  h4 {
+    animation-duration: 1.7s;
+    animation-name: slidein;
+  }
+
+  .row {
+    animation-duration: 2s;
     animation-name: slidein;
   }
 }
